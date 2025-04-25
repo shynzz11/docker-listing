@@ -1,22 +1,4 @@
-# Campus Assessment: Doctor Listing Page
-
-## Task Overview
-
-Develop and deploy a doctor listing page that includes:
-
-- An **autocomplete search bar** for doctor names.
-- A **filter panel** with:
-  - Consultation type (single select).
-  - Specialties (multi-select).
-  - Sort options (fees and experience).
-- A **doctor list** rendered using data from a provided API.
-- Sample UI image is attached at the bottom.
-- Functionality has more weightage than UI.
-- Once done, Fill the Final submission form.
-- Final Submission Form Link: https://forms.office.com/r/jzUf2S2tSC
-
-All filters and search must work **entirely on the client side** after the initial API call.
-
+# Doctor Listing Page
 ---
 
 ##  Features to Implement
@@ -103,17 +85,3 @@ Use the following `data-testid` attributes **exactly as listed** for test automa
 
 ---
 
-## Notes
-
-- Do **not reuse** the same `data-testid` for different elements unless allowed.
-- All filters work in **combination**, and must reflect in the query parameters.
-- "Clear All", chevron toggles, or search inside specialties filter are **not required**.
-- Handle browser navigation (`Back`/`Forward`) to retain filters using the query params.
-- Don't forget to fill the final submission form.
-
----
-
-Happy coding and good luck! 🚀
-
-![Page Design](https://cmsuatstor.blob.core.windows.net/cms-uat/assets/image_8e9f8f882a.png "Sample Page Design")
-![Autocomplete Design](https://cmsuatstor.blob.core.windows.net/cms-uat/assets/image_1_c40c34dccc.png "Sample Autocomplete Design")
