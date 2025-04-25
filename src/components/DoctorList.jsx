@@ -1,6 +1,10 @@
 import React from "react"
 
 const DoctorList = ({ doctors }) => {
+	const handleImageError = (e) => {
+		e.target.style.display = "none"
+	}
+
 	return (
 		<div className="doctor-list">
 			{doctors.length === 0 ? (
@@ -16,7 +20,11 @@ const DoctorList = ({ doctors }) => {
 					>
 						<div className="doctor-header">
 							<div className="doctor-photo">
-								<img src={doctor.photo} alt={doctor.name} />
+								<img
+									src={doctor.photo}
+									alt={doctor.name}
+									onError={handleImageError}
+								/>
 								<div className="initials">{doctor.name_initials}</div>
 							</div>
 							<div className="doctor-info">
@@ -58,6 +66,7 @@ const DoctorList = ({ doctors }) => {
 											src={doctor.clinic.logo_url}
 											alt={doctor.clinic.name}
 											className="clinic-logo"
+											onError={handleImageError}
 										/>
 									)}
 									<h5>{doctor.clinic.name}</h5>

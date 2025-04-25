@@ -35,7 +35,12 @@ const DoctorListing = () => {
 	useEffect(() => {
 		setIsLoading(true)
 		axios
-			.get("https://srijandubey.github.io/campus-api-mock/SRM-C1-25.json")
+			.get("https://srijandubey.github.io/campus-api-mock/SRM-C1-25.json", {
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+				},
+			})
 			.then((response) => {
 				const doctorsData = response.data
 				setDoctors(doctorsData)
@@ -45,6 +50,9 @@ const DoctorListing = () => {
 			.catch((error) => {
 				console.error("Error fetching data:", error)
 				setIsLoading(false)
+				// Show error state to user
+				setDoctors([])
+				setFilteredDoctors([])
 			})
 	}, [])
 
